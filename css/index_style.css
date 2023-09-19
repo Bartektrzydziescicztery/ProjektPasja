@@ -1,0 +1,415 @@
+:root {
+	--h2-font-size: 36px;
+	--h2-padding: 0 15px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #000;
+	font-family: "Ysabeau Infant", sans-serif;
+	color: antiquewhite;
+}
+
+.wrapper {
+	min-width: 280px;
+	width: 100%;
+	height: 100%;
+	/* overflow: hidden; */
+}
+/* =========================================================== */
+/* PIERWSZA SEKCJA =========================================== */
+
+header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.logo-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	border-radius: 100%;
+}
+
+.logo-img {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 500px;
+	/* height: 100%; */
+	filter: invert(100%) sepia(120%) brightness(120%);
+	opacity: 0.6;
+}
+
+/* PRZYCISK ================================================== */
+
+.round-button {
+	width: 50px;
+	height: 50px;
+	transform: rotate(90deg);
+	box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 1);
+	/* border: 2px solid antiquewhite; */
+	border-radius: 100%;
+	opacity: 0.8;
+}
+
+.animated-button {
+	animation: slide-br 1s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.cta {
+	position: absolute;
+	width: 100%;
+	cursor: pointer;
+}
+
+.arrow {
+	position: absolute;
+	top: 19px;
+	bottom: 0;
+	left: 34%;
+	margin-left: 0px;
+	width: 12px;
+	height: 12px;
+	background-size: contain;
+}
+.second {
+	margin-left: 9px;
+}
+.next {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+	filter: sepia(100%);
+}
+
+@keyframes bounceAlpha {
+	0% {
+		opacity: 1;
+		transform: translateX(0px) scale(1);
+	}
+	25% {
+		opacity: 0;
+		transform: translateX(10px) scale(0.9);
+	}
+	26% {
+		opacity: 0;
+		transform: translateX(-10px) scale(0.9);
+	}
+	55% {
+		opacity: 1;
+		transform: translateX(0px) scale(1);
+	}
+}
+
+@keyframes slide-br {
+	0% {
+		transform: translateY(100px) rotate(-90deg);
+		opacity: 0;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0) rotate(90deg);
+		opacity: 1;
+	}
+}
+
+.arrow {
+	animation-name: bounceAlpha;
+	animation-duration: 1.4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.arrow.first {
+	animation-name: bounceAlpha;
+	animation-duration: 1.4s;
+	animation-delay: 0.2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+/* ======================================================== */
+/* O NAS ================================================== */
+
+main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	padding-top: 30px;
+	min-height: 100vh;
+	background-image: url("../img/candles-7304948_1280.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.main-shadow {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+}
+
+h2 {
+	font-size: var(--h2-font-size);
+	font-style: italic;
+}
+
+main h2,
+main p {
+	margin: 20px;
+	z-index: 1;
+}
+
+a {
+	z-index: 1;
+}
+
+button {
+	padding: 15px 30px;
+
+	background-color: transparent;
+	color: rgba(250, 235, 215, 0.75);
+	/* color: antiquewhite opacity 0.75 */
+	font-size: 26px;
+	font-family: "Ysabeau Infant", sans-serif;
+	border: 2px double rgba(250, 235, 215, 0.75);
+	cursor: pointer;
+	transition: background-color 0.5s, color 0.5s;
+}
+
+/* =========================================================== */
+/* NASZA OFERTA ============================================== */
+
+#offer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+	padding-bottom: 50px;
+	background-image: linear-gradient(
+		245deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(93, 65, 58, 1) 100%
+	);
+}
+
+#offer h2 {
+	margin-top: 90px;
+	margin-bottom: 100px;
+	padding: var(--h2-padding);
+	font-size: var(--h2-font-size);
+	font-style: italic;
+}
+
+#offer .offer-box {
+	min-height: 70vh;
+	margin-bottom: 50px;
+	width: 90%;
+	/* border: 1px solid red; */
+}
+#offer .last {
+	margin-bottom: 0;
+}
+
+.offer-box img {
+	width: 100%;
+}
+
+.offer-box .header-p {
+	margin: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.offer-box p {
+	margin: 10px;
+}
+
+#offer button {
+	padding: 15px 30px;
+	width: 214px;
+	background-color: transparent;
+	color: rgba(250, 235, 215, 0.75);
+	/* color: antiquewhite opacity 0.75 */
+	font-size: 26px;
+	font-family: "Ysabeau Infant", sans-serif;
+	border: 2px double rgba(250, 235, 215, 0.75);
+	cursor: pointer;
+	transition: background-color 0.5s, color 0.5s;
+}
+
+/* button:hover {
+	background-color: rgba(250, 235, 215, 0.45);
+	color: antiquewhite;
+} */
+
+/* =========================================================== */
+/* FEEDBACK ================================================== */
+
+#feedback {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+	padding-bottom: 50px;
+	background-image: url("../img/candles-7304948_1280.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.feedback-shadow {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+}
+
+#feedback h2 {
+	padding: var(--h2-padding);
+	margin-top: 100px;
+	margin-bottom: 100px;
+	font-size: var(--h2-font-size);
+	font-style: italic;
+	z-index: 1;
+}
+
+.feedback-box {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 30px;
+	width: 70%;
+	min-width: 280px;
+	max-width: 600px;
+	z-index: 1;
+}
+
+/* .middle {
+	justify-content: flex-end;
+	padding-left: 20px;
+} */
+
+.feedback-box img {
+	max-width: 265px;
+}
+
+/* =========================================================== */
+/* FOOTER ==================================================== */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 20px;
+	min-height: 100vh;
+}
+
+.contact-box {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.h3-box {
+	margin-bottom: 20px;
+	border-bottom: 1px solid antiquewhite;
+}
+
+.content-box {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+footer h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.media-box img {
+	padding: 10px;
+	width: 50px;
+	border-radius: 15px;
+}
+
+/* WSPÓLNE ^ ================================================= */
+
+.contact {
+	width: 60%;
+}
+
+footer h4 {
+	margin: 10px 0px;
+	font-size: 18px;
+}
+
+/* =========================================================== */
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 35%;
+}
+
+ul {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: antiquewhite;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	line-height: 30px;
+}
+
+a li {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+/* =========================================================== */
+
+.map {
+	margin: 0 auto;
+	width: 95%;
+	height: 350px;
+	text-align: center;
+}
