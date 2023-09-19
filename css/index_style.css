@@ -225,6 +225,7 @@ button {
 }
 
 #offer .offer-box {
+	margin-bottom: 25px;
 	width: 90%;
 	/* border: 1px solid red; */
 }
