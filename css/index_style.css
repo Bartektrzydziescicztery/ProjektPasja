@@ -218,8 +218,8 @@ button {
 }
 
 #offer h2 {
-	margin-top: 90px;
-	margin-bottom: 100px;
+	margin-top: 50px;
+	margin-bottom: 60px;
 	padding: var(--h2-padding);
 	font-size: var(--h2-font-size);
 	font-style: italic;
@@ -227,7 +227,6 @@ button {
 
 #offer .offer-box {
 	min-height: 70vh;
-	margin-bottom: 50px;
 	width: 90%;
 	/* border: 1px solid red; */
 }
@@ -251,7 +250,6 @@ button {
 
 #offer button {
 	padding: 15px 30px;
-	width: 214px;
 	background-color: transparent;
 	color: rgba(250, 235, 215, 0.75);
 	/* color: antiquewhite opacity 0.75 */
@@ -296,9 +294,9 @@ button {
 }
 
 #feedback h2 {
-	padding: var(--h2-padding);
-	margin-top: 100px;
-	margin-bottom: 100px;
+	padding: 0 15px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	font-size: var(--h2-font-size);
 	font-style: italic;
 	z-index: 1;
@@ -334,7 +332,6 @@ footer {
 	flex-direction: column;
 	justify-content: flex-start;
 	padding: 20px;
-	min-height: 100vh;
 }
 
 .contact-box {
@@ -410,6 +407,6 @@ a li {
 .map {
 	margin: 0 auto;
 	width: 95%;
-	height: 350px;
+	height: 300px;
 	text-align: center;
 }
