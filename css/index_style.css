@@ -218,15 +218,14 @@ button {
 }
 
 #offer h2 {
-	margin-top: 50px;
-	margin-bottom: 60px;
+	margin-top: 60px;
+	margin-bottom: 70px;
 	padding: var(--h2-padding);
 	font-size: var(--h2-font-size);
 	font-style: italic;
 }
 
 #offer .offer-box {
-	min-height: 70vh;
 	width: 90%;
 	/* border: 1px solid red; */
 }
@@ -295,8 +294,8 @@ button {
 
 #feedback h2 {
 	padding: 0 15px;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-top: 60px;
+	margin-bottom: 60px;
 	font-size: var(--h2-font-size);
 	font-style: italic;
 	z-index: 1;
@@ -331,6 +330,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	min-height: 100vh;
 	padding: 20px;
 }
 
